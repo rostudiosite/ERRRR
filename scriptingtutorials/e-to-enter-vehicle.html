@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="How to make an e to enter vehicle in Roblox Studio?">
+    <meta name="keywords" content="vehicle, roblox studio, roblox tutorial">
+    <meta name="author" content="RoStudio">
+
+    <title>E enter Vehicle Roblox Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="/media/RoStudioIcon.png">
+
+    <link rel="stylesheet" href="/info.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2T87WKWCY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W2T87WKWCY');
+    </script>
+
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+ 
+    <div>
+
+        <div class="home-container">
+
+            <nav class="navbar">
+                <div class="navbar__container">
+                  <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/learn" class="navbar__links">Learn</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://www.discord.io/rostudio" class="navbar__links">Discord</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="backgroundbox">
+
+                <h1>How to make an e to enter vehicle in Roblox Studio?</h1>
+
+                <p>Today we will be creating an e to enter vehicle in Roblox Lua. Throughout this tutorial, you will be learning how to use Proximity Prompts.</p>
+
+                <h3>Setup:</h3>
+
+                <p>Inside your vehicle seat create a Proximity Prompt.</p>
+
+                <p>Inside the Proximity Prompt create a server script. You can name it whatever you want.</p>
+
+                <div class="imagecontainer">
+                    <img id="image" src="/media/image1.png" />
+                </div>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <h3>Scripting:</h3>
+
+                <p>Now we will move on to scripting.</p>
+
+                <p>For our variables, we will need the Proximity Prompt and the seat.</p>
+
+                <pre>
+                    <code>
+local Seat = script.Parent.Parent
+lcoal ProximityPrompt = script.Parent
+                    </code>
+                </pre>
+
+                <p>Now we need to get when the player presses E. We can do this with Triggered. Triggered is an event that is fired when the KeyCode is pressed or clicked on mobile.</p>
+
+                <pre>
+                    <code>
+local Seat = script.Parent.Parent
+lcoal ProximityPrompt = script.Parent
+
+ProximityPrompt.Triggered:Connect(function(Player)
+
+end)
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+
+                <p>Once we detected that the ProximityPrompt is triggered we need to make them enter the vehicle.</p>
+
+                <pre>
+                    <code>
+local Seat = script.Parent.Parent
+lcoal ProximityPrompt = script.Parent
+
+ProximityPrompt.Triggered:Connect(function(Player)
+    Seat:Sit(Player.Character.Humanoid)
+end)                 
+                    </code>
+                </pre>
+
+                <p>We are almost done! Finally, we have to disable the ProximityPrompt if someone is already inside the vehicle.</p>
+
+                <pre>
+                    <code>
+local Seat = script.Parent.Parent
+lcoal ProximityPrompt = script.Parent
+
+ProximityPrompt.Triggered:Connect(function(Player)
+    Seat:Sit(Player.Character.Humanoid)
+end) 
+
+Seat.Changed:Connect(function()
+    if Seat.Occupant == nil then
+        ProximityPrompt.Enabled = true
+    else
+        ProximityPrompt.Enabled = flase
+    end
+end)
+
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <h3>We are done!</h3>
+                
+                <div class="videocontainer">
+                    <video id="video" src="/media/video1.mp4" controls="" autoplay="" loop="" muted="">
+                </div>
+
+                
+
+            </div>    
+
+            <div style="padding-top: -1rem;" class="backgroundbox">
+
+                <p style="text-align: center; font-size: 1.7rem;" >Credits</p>
+
+                <p style="text-align: center; font-size: 1.7rem;" >Owner: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Web Developer: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Publisher: cancle5</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

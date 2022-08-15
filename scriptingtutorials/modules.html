@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="Roblox Studio Modules, what are they and how could we use them?">
+    <meta name="keywords" content="module, roblox studio, roblox tutorial">
+    <meta name="author" content="RoStudio">
+
+    <title>Modules Roblox Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="/media/RoStudioIcon.png">
+
+    <link rel="stylesheet" href="/info.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2T87WKWCY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W2T87WKWCY');
+    </script>
+    
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+
+    <div>
+
+        <div class="home-container">
+
+            <nav class="navbar">
+                <div class="navbar__container">
+                  <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/learn" class="navbar__links">Learn</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://www.discord.io/rostudio" class="navbar__links">Discord</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="backgroundbox">
+
+                <h1>Roblox Studio Modules, what are they and how could we use them?</h1>
+
+                <p style="font-size: 1.5rem;">In this tutorial we will be explaining everything about modules and how you can use them.</p>
+
+                <h3>What are module scripts?</h3>
+
+                <p style="font-size: 1.4rem;">Module scripts are global scripts that return one value when called. In order to receive the value, you must call the require() function on it. Module scripts can contain lots of data that could be used across multiple scripts. Now let's move on to the next question, which is how you could use them.</p>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <h3>How could you use them?</h3>
+
+                <p style="font-size: 1.4rem;">They are mostly used as global variables and global functions; you should only use them when you want to access something across multiple scripts.</p>
+
+                <h3>How to use them?</h3>
+
+                <p style="font-size: 1.4rem;">Using them is pretty simple. You can create a module anywhere and access it from a script. You should store your modules in Server Storage for server scripts and in Replicated Storage for local scripts.</p>
+
+                <h3>Code example:</h3>
+
+                <p style="font-size: 1.4rem;">Module script inside Server Storage:</p>
+
+                <pre>
+                    <code>
+local ModuleMessage = "Password: 12345"      
+
+return ModuleMessage
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <p style="font-size: 1.4rem;">Server script inside Server Script Service:</p>
+
+                <pre>
+                    <code>
+local ModuleMessage = require(game.ServerScriptService.ModuleScript) 
+
+print(ModuleMessage)
+                    </code>
+                </pre>
+
+                <h3>Downsides?</h3>
+
+                <p style="font-size: 1.4rem;">Modules basically have no downsides. They are used for almost everything.</p>
+
+            </div>
+
+            <div style="padding-top: -1rem;" class="backgroundbox">
+
+                <p style="text-align: center; font-size: 1.7rem;" >Credits</p>
+
+                <p style="text-align: center; font-size: 1.7rem;" >Owner: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Web Developer: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Publisher: cancle5</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

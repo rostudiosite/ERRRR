@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="How to make a shift to sprint in Roblox Studio?">
+    <meta name="keywords" content="shift to sprint, roblox studio, roblox tutorial">
+    <meta name="author" content="RoStudio">
+
+    <title>Shift Sprint Roblox Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="/media/RoStudioIcon.png">
+
+    <link rel="stylesheet" href="/info.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2T87WKWCY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W2T87WKWCY');
+    </script>
+
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+
+    <div>
+
+        <div class="home-container">
+
+            <nav class="navbar">
+                <div class="navbar__container">
+                  <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/learn" class="navbar__links">Learn</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://www.discord.io/rostudio" class="navbar__links">Discord</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="backgroundbox">
+
+                <h1>How to make a shift to sprint in Roblox Studio?</h1>
+
+                <p>Today we will be creating a shift to sprint in Roblox Lua. Throughout this tutorial, you will be learning how to use <a href="/scriptingtutorials/shift-to-sprint">UserInputService</a>.</p>
+
+                <h3>Setup:</h3>
+
+                <p>Inside PlayerScripts > StarterCharacterScripts create a Local Script. You can name it whatever you want.</p>
+
+                <div class="imagecontainer">
+                    <img id="image" src="/media/image2.png" />
+                </div>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <h3>Scripting:</h3>
+
+                <p>Now we will move on to scripting.</p>
+
+                <p>For our variables we will need two services. <a href="/scriptingtutorials/shift-to-sprint">Players</a> and <a href="/scriptingtutorials/shift-to-sprint">UserInputService</a>.</p>
+
+                <p>We will also have variables for our player and character.</p>
+
+                <pre>
+                    <code>
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local Player = Players.LocalPlayer
+local Character = Player.Character
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <p>Now let's move on to the user input part. We will be using <a href="/scriptingtutorials/shift-to-sprint">Players</a> and <a href="/scriptingtutorials/shift-to-sprint">UserInputService</a> to get when the player presses Shift or let's go.</p>
+
+                <p>We can check when the player presses the key with InputBegan and when they let go we can check with InputEnded.</p>
+
+                <pre>
+                    <code>
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local Player = Players.LocalPlayer
+local Character = Player.Character
+
+UserInputService.InputBegan:Connect(function(input)
+
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+
+end)
+                    </code>
+                </pre>
+
+                <p>Now let's check if the input key code is Shift. If so, we will make their walk speed higher.</p>
+
+                <p>We will also be creating two more variables that contain the default walk speed and the sprinting walk speed.</p>
+
+                <pre>
+                    <code>
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local Player = Players.LocalPlayer
+local Character = Player.Character
+
+local DefualtSpeed = 16
+local SprintingSpeed = 25
+
+UserInputService.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.LeftShift then
+        Character.Humanoid.WalkSpeed = SprintingSpeed
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+
+end)                    
+                    </code>
+                </pre>
+
+                <p>Finally, we will detect when the player has released the shift key and set their walk speed to normal.</p>
+
+                <pre>
+                    <code>
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local Player = Players.LocalPlayer
+local Character = Player.Character
+
+local DefualtSpeed = 16
+local SprintingSpeed = 25
+
+UserInputService.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.LeftShift then
+        Character.Humanoid.WalkSpeed = SprintingSpeed
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.LeftShift then
+        Character.Humanoid.WalkSpeed = DefualtSpeed
+    end
+end)   
+
+                    </code>
+                </pre>
+
+                <h3>We are done!</h3>
+                
+                <div class="videocontainer">
+                    <video id="video" src="/media/video2.mp4" controls="" autoplay="" loop="" muted="">
+                </div>
+
+
+            </div> 
+            
+            <div style="padding-top: -1rem;" class="backgroundbox">
+
+                <p style="text-align: center; font-size: 1.7rem;" >Credits</p>
+
+                <p style="text-align: center; font-size: 1.7rem;" >Owner: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Web Developer: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Publisher: cancle5</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

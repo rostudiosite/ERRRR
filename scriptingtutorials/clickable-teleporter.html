@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="How to make a clickable teleporter in roblox studio?">
+    <meta name="keywords" content="roblox studio, roblox tutorial, roblox studio tutorial how to make a clickable teleporter">
+    <meta name="author" content="RoStudio">
+
+    <title>Clickable Teleporter Roblox Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="/media/RoStudioIcon.png">
+
+    <link rel="stylesheet" href="/info.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2T87WKWCY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W2T87WKWCY');
+    </script>
+    
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+
+    <div>
+
+        <div class="home-container">
+
+            <nav class="navbar">
+                <div class="navbar__container">
+                  <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/learn" class="navbar__links">Learn</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://www.discord.io/rostudio" class="navbar__links">Discord</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="backgroundbox">
+
+                <h1>How to make a clickable teleporter in Roblox Studio?</h1>
+
+                <p>Today we will be creating a clickable teleporter in Roblox Lua. Throughout this tutorial, you will be learning how to use click detecters.</p>
+
+                <h3>Setup:</h3>
+
+                <p>Inside Workspace create a part. You can name it whatever you want. Inside the part add a click detecter and a script. Name the click detected "ClickDetecter".</p>
+
+                <p>It should look something like this:</p>
+
+                <div style="max-width: 29rem; min-width: fit-content;" class="imagecontainer">
+                    <img id="image" src="/media/image4.png" />
+                </div>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <h3>Scripting:</h3>
+
+                <p>Now we will move on to scripting.</p>
+
+                <p>First we will start with our variables.</p>
+
+                <p>The "Part" variable will be for our click detecter part.</p>
+
+                <p>The "Detecter" variable will be for our click detecter.</p>
+
+                <pre>
+                    <code>
+local Part = script.Parent
+local Detecter = script.Parent.ClickDetecter
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <p>Now we will get whenever someone clicks the part using the "MouseClick" event on with click detecter.</p>
+
+                <pre>
+                    <code>
+local Part = script.Parent
+local Detecter = script.Parent.ClickDetecter
+
+ClickDetecter.MouseClick:Connect(function(PlayerWhoClicked)
+
+end)
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <p>Finally, we will teleport the player using the function "MoveTo" on the character model. The position must be a Vector3.</p>
+
+                <pre>
+                    <code>
+local Part = script.Parent
+local Detecter = script.Parent.ClickDetecter
+
+ClickDetecter.MouseClick:Connect(function(PlayerWhoClicked)
+    PlayerWhoClicked.Character:MoveTo(Vector3.new(0, 2, 0))
+end)
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <p>You can also teleport to a parts position with PartVariable.Position.</p>
+
+                <h3>We are done!</h3>
+                
+                <div class="videocontainer">
+                    <video id="video" src="/media/video5.mp4" controls="" autoplay="" loop="" muted="">
+                </div>
+            
+            <div style="padding-top: -1rem;" class="backgroundbox">
+
+                <p style="text-align: center; font-size: 1.7rem;" >Credits</p>
+
+                <p style="text-align: center; font-size: 1.7rem;" >Owner: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Web Developer: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Publisher: cancle5</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

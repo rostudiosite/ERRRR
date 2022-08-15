@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="How to make a day / night cycle in Roblox Studio?">
+    <meta name="keywords" content="cycle, roblox studio, roblox tutorial">
+    <meta name="author" content="RoStudio">
+
+    <title>Day / Night cycle Roblox Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="/media/RoStudioIcon.png">
+
+    <link rel="stylesheet" href="/info.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2T87WKWCY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W2T87WKWCY');
+    </script>
+    
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+
+    <div>
+
+        <div class="home-container">
+
+            <nav class="navbar">
+                <div class="navbar__container">
+                  <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/learn" class="navbar__links">Learn</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://www.discord.io/rostudio" class="navbar__links">Discord</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="backgroundbox">
+
+                <h1>How to make a day / night cycle in Roblox Studio?</h1>
+
+                <p>Today we will be creating a day / night cycle in Roblox Lua. Throughout this tutorial, you will be learning how to use <a href="/scriptingtutorials/day-night-cycle">loops</a>.</p>
+
+                <h3>Setup:</h3>
+
+                <p>Inside ServerScriptService create a Server Script. You can name it whatever you want.</p>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <h3>Scripting:</h3>
+
+                <p>Now we will move on to scripting.</p>
+
+                <p>First we will start with our variables.</p>
+
+                <pre>
+                    <code>
+local WaitTime = 0.1
+local ChangeBy = 0.5
+                    </code>
+                </pre>
+
+                <script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5929302"></script>
+
+                <p>Now we will create a loop to change the time with the cooldown of "WaitTime".</p>
+
+                <pre>
+                    <code>
+local WaitTime = 0.1
+local ChangeBy = 0.5
+
+while wait(WaitTime) do
+
+end               
+                    </code>
+                </pre>
+
+                <p>Finally inside the loop we will change the time by "ChangeBy".</p>
+
+                <pre>
+                    <code>
+local WaitTime = 0.1
+local ChangeBy = 0.5
+
+while wait(WaitTime) do
+    game.Lighting.ClockTime = game.Lighting.ClockTime + ChangeBy
+end                                             
+                    </code>
+                </pre>
+
+                <h3>We are done!</h3>
+                
+                <div class="videocontainer">
+                    <video id="video" src="/media/video3.mp4" controls="" autoplay="" loop="" muted="">
+                </div>
+
+
+
+            </div>    
+
+            <div style="padding-top: -1rem;" class="backgroundbox">
+
+                <p style="text-align: center; font-size: 1.7rem;" >Credits</p>
+
+                <p style="text-align: center; font-size: 1.7rem;" >Owner: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Web Developer: cancle5</p>
+                <p style="text-align: center; font-size: 1.7rem;" >Publisher: cancle5</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
